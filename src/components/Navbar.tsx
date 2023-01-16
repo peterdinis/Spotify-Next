@@ -1,7 +1,7 @@
 const Navbar: React.FC = () => {
     return (
         <>
-        gggg
+      
         </>
     )
 }
