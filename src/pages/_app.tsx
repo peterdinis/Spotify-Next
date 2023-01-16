@@ -1,16 +1,15 @@
 import Layout from '@/components/shared/Layout';
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import {
-  RecoilRoot,
-} from 'recoil';
+import { Provider } from 'react-redux';
+import store from "@/redux/index";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <RecoilRoot>
       <Layout>
-      <Component {...pageProps} />
+        <Provider store={store}>
+        <Component {...pageProps} />
+        </Provider>
       </Layout>
-    </RecoilRoot>
   )
 }
