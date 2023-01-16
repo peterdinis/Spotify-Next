@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../Navbar";
-import Seo from "../Seo";
+import Navbar from "./Navbar";
+import Seo from "./Seo";
 
 interface IProps {
     children?: React.ReactNode;
