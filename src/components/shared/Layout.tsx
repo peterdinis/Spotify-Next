@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 import Seo from "./Seo";
 
 interface IProps {
@@ -10,7 +9,6 @@ const Layout: React.FC<IProps> = ({children}: IProps) => {
     return (
         <>
           <Seo />
-          <Navbar />
           {children}
         </>
     )
