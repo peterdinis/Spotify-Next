@@ -3,7 +3,7 @@ interface IconBasicProps {
 }
 
 interface IconIProps {
-  size: number;
+  size?: number;
   name: string;
 }
 
