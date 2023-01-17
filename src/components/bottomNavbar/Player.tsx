@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import Icon from "../shared/Icons";
 import {useAudio} from 'react-use';
 import MyRange from '../shared/MyRange';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setControls } from '@/redux/slices/playerSlice';
 import { RootState } from '@/redux';
 import { useAppSelector } from '@/hooks/useRedux';

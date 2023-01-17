@@ -1,11 +1,20 @@
 import {createSlice} from '@reduxjs/toolkit'
 
+interface IPlayerState {
+    current: any; // later change
+    controls: boolean;
+    playing: boolean;
+    sidebar: boolean;
+}
+
 const initialState = {
-    current: false,
+    current: {
+        src: ""
+    },
     controls: false,
     playing: false,
     sidebar: false
-}
+} as IPlayerState;
 
 export const playerSlice = createSlice({
     name: 'player',
