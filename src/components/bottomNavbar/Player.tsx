@@ -40,8 +40,8 @@ const Player: React.FC = () => {
 
   return (
     <>
-     <div className='flex justify-between items-center px-4 justify-center'>
-        <div className='min-w-[11.25rem] w-[30%]ß'>
+     <div className='flex justify-between items-center px-4'>
+        <div className='min-w-[11.25rem] w-[30%]ß justify-center'>
         {current && (
             <div className='flex items-center'>         
                 <div className='flex items-center'>
