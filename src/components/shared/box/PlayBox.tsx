@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 interface IPlayBoxProps {
-    title: string;
-    see: any;
+    title?: string;
+    see?: any;
 }
 
 export default function PlayBox({title ,see}: IPlayBoxProps) {
