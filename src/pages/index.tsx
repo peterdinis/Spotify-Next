@@ -1,8 +1,10 @@
+import BodyWrapper from "@/components/BodyWrapper";
+import { NextPage } from "next";
 
-export default function Home() {
+const Homepage: NextPage = () => {
   return (
-    <>
-      FOOBAR
-    </>
+    <BodyWrapper />
   )
 }
+
+export default Homepage;
