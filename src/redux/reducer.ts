@@ -1,7 +1,6 @@
 import { BasicAction, IState } from "@/types/reduxTypes";
 import { spotifyConstants } from "./constants";
 
-
 export const initialState = {
   token: null,
   userInfo: null,
