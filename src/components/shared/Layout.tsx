@@ -1,4 +1,5 @@
 import React from "react";
+import Seo from "./Seo";
 
 interface ILayoutProps {
     children?: React.ReactNode;
@@ -7,6 +8,7 @@ interface ILayoutProps {
 const Layout: React.FC<ILayoutProps> = ({children}: ILayoutProps) => {
     return (
         <>
+          <Seo />
           {children}
         </>
     )
