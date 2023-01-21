@@ -3,10 +3,10 @@ import { LoginContainer } from "@/styles/Component.styled";
 const LoginForm: React.FC = () => {
  
   const handleClick = () => {
-    const client_id = process.env.NEXT_PUBLIC_CLIENT_ID as string;
-    const redirect_uri = process.env.NEXT_PUBLIC_CLIENT_SECRET as string;
+    const client_id = "12f84dd0b53c490bb7fe3721a6765ac1";
+    const redirect_uri = "http://localhost:3000/";
     const api_uri = "https://accounts.spotify.com/authorize";
-    
+
     const scope = [
       "user-read-private",
       "user-read-email",

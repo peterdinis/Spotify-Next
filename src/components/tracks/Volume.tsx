@@ -1,4 +1,5 @@
 import { VolumeContainer } from "@/styles/Component.styled";
+import axios from "axios";
 
 const Volume: React.FC = () => {
   return (
