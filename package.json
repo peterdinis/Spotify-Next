@@ -26,6 +26,7 @@
     "react-dom": "18.2.0",
     "react-range": "^1.8.14",
     "react-toastify": "^9.1.1",
+    "spotify-web-api-js": "^1.5.2",
     "styled-components": "^5.3.6",
     "typescript": "4.9.4"
   },
