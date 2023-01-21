@@ -61,8 +61,7 @@ export const BodyContainer = styled.div`
       top: 15vh;
       padding: 1rem 3rem;
       transition: 0.3s ease-in-out;
-      background-color: ${({ headerBackground }: any) =>
-        headerBackground ? "#000000dc" : "none"};
+      background-color: "#000000dc"
     }
     .tracks {
       margin: 0 2rem;
