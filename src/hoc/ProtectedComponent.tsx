@@ -3,7 +3,7 @@ import Router from 'next/router';
 import { getTokenFromUrl } from '@/utils/spotify';
 
 const withAuth = (WrappedComponent: any) => {
-    const WithAuth = (props: JSX.IntrinsicAttributes) => {
+    const WithAuth = (props: any) => {
         const [loading, setLoading] = useState(true);
         const [user, setUser] = useState(null);
         const [token, setToken] = useState(null);
