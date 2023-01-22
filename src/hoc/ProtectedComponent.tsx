@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import Router from 'next/router';
 import { getTokenFromUrl } from '@/utils/spotify';
+import SpotifyWebApi from 'spotify-web-api-js';
+
+const spotify = new SpotifyWebApi();
 
 const withAuth = (WrappedComponent: any) => {
     const WithAuth = (props: any) => {
         const [loading, setLoading] = useState(true);
-        const [user, setUser] = useState(null);
         const [token, setToken] = useState(null);
     
         useEffect(() => {
@@ -15,6 +17,11 @@ const withAuth = (WrappedComponent: any) => {
 
             if(_token) {
                 setToken(_token);
+                spotify.setAccessToken(_token);
+
+                spotify.getMe().then((user: any) => {
+                    console.log("Ping work", user);
+                })
             }
 
             setLoading(false);
