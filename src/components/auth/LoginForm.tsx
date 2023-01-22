@@ -1,6 +1,7 @@
 import styles from "../../styles/Auth.module.css";
 
 const LoginForm: React.FC = () => {
+ 
   return (
     <div className={styles.loginContainer}>
       <img
