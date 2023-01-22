@@ -12,7 +12,12 @@ const scopes = [
 
 /* Get token for url */
 export const getTokenFromUrl = () => {
-    return window.location.hash.substring(1).split("&").reduce((initi));
+    return window.location.hash.substring(1).split("&").reduce((initial: any, item: any) => {
+        let parts = item.split("=");
+        initial[parts[0]] = decodeURIComponent(parts[1]);
+
+        return initial;
+    }, {});
 }
 
 export const loginUrl = `${apiEndpoint}?client_id=${client_id}&redirect_uri=${redirectEndpoint}&scope=${scopes.join(" ")}&response_type=token&show_dialog=true`;
