@@ -8,6 +8,11 @@ const scopes = [
     "user-read-playback-state",
     "user-top-read",
     "user-modify-playback-state"
-]
+];
+
+/* Get token for url */
+export const getTokenFromUrl = () => {
+    return window.location.hash.substring(1).split("&").reduce((initi));
+}
 
 export const loginUrl = `${apiEndpoint}?client_id=${client_id}&redirect_uri=${redirectEndpoint}&scope=${scopes.join(" ")}&response_type=token&show_dialog=true`;
