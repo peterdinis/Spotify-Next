@@ -1,3 +1,4 @@
 .loginContainer {
-    
+    display: grid;
+    place-items: center; /* Place items in center */
 }
