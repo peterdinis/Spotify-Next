@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Router from 'next/router';
 import { getTokenFromUrl } from '@/utils/spotify';
 import SpotifyWebApi from 'spotify-web-api-js';
+import { useSpotify } from '@/hooks/useSpotifyContext';
 
 const spotify = new SpotifyWebApi();
 
@@ -9,6 +10,8 @@ const withAuth = (WrappedComponent: any) => {
     const WithAuth = (props: any) => {
         const [loading, setLoading] = useState(true);
         const [token, setToken] = useState(null);
+
+        const [{}, dispatch] = useSpotify() as any;
     
         useEffect(() => {
             const hash = getTokenFromUrl();
@@ -21,6 +24,11 @@ const withAuth = (WrappedComponent: any) => {
 
                 spotify.getMe().then((user: any) => {
                     console.log("Ping work", user);
+
+                    dispatch({
+                        type: "SET_USER",
+                        user,
+                    })
                 })
             }
 
