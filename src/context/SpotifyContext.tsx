@@ -10,7 +10,9 @@ interface ISpotifyContextProps {
 }
 
 export const SpotifyLayer = ({initialState, reducer, children}: ISpotifyContextProps) => {
-  <SpotifyContext.Provider value={useReducer(reducer, initialState) as any}>
+  return (
+    <SpotifyContext.Provider value={useReducer(reducer, initialState) as any}>
     {children}
   </SpotifyContext.Provider>
+  )
 }
