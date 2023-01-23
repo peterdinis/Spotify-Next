@@ -1,9 +1,14 @@
+import {ReactNode} from "react";
 import withAuth from "./ProtectedComponent";
 
-const ProtectedRoute = (props: any) => {
+interface IProps {
+    children?: ReactNode;
+}
+
+const ProtectedRoute = ({children}: IProps) => {
     return (
         <>
-            {props.children}
+            {children}
         </>
     )
   };

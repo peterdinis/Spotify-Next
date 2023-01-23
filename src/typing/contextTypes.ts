@@ -11,3 +11,12 @@ export const initialState = {
     playing: false,
     item: null
 } as InitialStateI;
+
+
+type UserAction = {
+    type: string,
+    payload: any
+}
+
+
+export type ReduxAction = UserAction | any;
