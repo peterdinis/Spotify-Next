@@ -2,14 +2,16 @@ export interface InitialStateI {
     user: null,
     playlists: Array<[]>,
     playing: boolean,
-    item: null
+    item: null,
+    token: null,
 }
 
 export const initialState = {
     user: null,
     playlists: [],
     playing: false,
-    item: null
+    item: null,
+    token: null,
 } as InitialStateI;
 
 // TODO: Update this later
@@ -19,5 +21,10 @@ type UserAction = {
     payload: any
 }
 
+type TokenAction = {
+    type: string,
+    payload: any
+}
 
-export type ReduxAction = UserAction | any;
+
+export type ReduxAction = UserAction | TokenAction | any;

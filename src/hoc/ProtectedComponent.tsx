@@ -9,9 +9,8 @@ const spotify = new SpotifyWebApi();
 const withAuth = (WrappedComponent: any) => {
     const WithAuth = (props: any) => {
         const [loading, setLoading] = useState(true);
-        const [token, setToken] = useState(null);
 
-        const [{}, dispatch] = useSpotify() as any;
+        const [{user, token}, dispatch] = useSpotify() as any;
     
         useEffect(() => {
             const hash = getTokenFromUrl();
@@ -19,7 +18,11 @@ const withAuth = (WrappedComponent: any) => {
             const _token = hash.accessToken;
 
             if(_token) {
-                setToken(_token);
+                dispatch({
+                    type: "SET_TOKEN",
+                    token: _token
+                })
+                
                 spotify.setAccessToken(_token);
 
                 spotify.getMe().then((user: any) => {
@@ -34,6 +37,8 @@ const withAuth = (WrappedComponent: any) => {
 
             setLoading(false);
         }, []);
+
+        console.log("User from context api", user);
     
         if (loading) {
             return <div>Loading...</div>;
