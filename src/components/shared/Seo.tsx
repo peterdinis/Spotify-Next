@@ -1,11 +1,15 @@
-import Head from "next/head"
+import Head from "next/head";
 
-const Seo = () => {
+interface ISeoProps {
+    title: string;
+}
+
+const Seo: React.FC<ISeoProps> = ({title}: ISeoProps) => {
     return (
         <Head>
-            <title>Spotify App</title>
+            <title>{title}</title>
         </Head>
     )
 }
 
-export default Seo
+export default Seo;
